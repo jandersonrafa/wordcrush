@@ -14,7 +14,7 @@ export default function routing($stateProvider, $urlRouterProvider) {
         url: '/base-text',
         views: {
 			[`content@${'secured'}`]: {
-				template: '<baseText></baseText>',
+				template: '<base-text></base-text>',
 			},
 		},
     })

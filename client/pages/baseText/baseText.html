@@ -1,7 +1,21 @@
-<div class="section section-buttons">
-    <div class="container">
-        <div class="tim-title">
-            <h2>Basic Elements</h2>
+<div class="section">
+    <div class="container ">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="tim-title ">
+                    <h2>Cadastre o texto que servirá como base para o jogo:</h2>
+                    <br>
+                </div>
+                <textarea ng-model="ctrl.text" class="form-control textarea-limited" rows="20" maxlength="10000"></textarea>
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-md-12">
+                <button type="button" ng-click="ctrl.importText()" class="baseText__buttonImport btn btn-default btn-round">
+                    <i class="fa fa-upload"></i> Extrair Palavras
+                </button>
+            </div>
         </div>
     </div>
 </div>

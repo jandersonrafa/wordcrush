@@ -10,10 +10,7 @@ import routes from './routes';
 import components from './components';
 import directives from './directives';
 import pages from './pages';
+import services from './services';
 
-
-
-
-
-angular.module('app', [uirouter, components, directives, pages])
+angular.module('app', [uirouter, components, directives, pages, services])
   .config(routes);

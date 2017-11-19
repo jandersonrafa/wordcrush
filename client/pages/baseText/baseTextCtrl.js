@@ -1,14 +1,13 @@
+let _baseTextService
+
 export default class BaseTextController {
-  constructor() {
-    this.random = {};
-    this.name = 'World';
+  constructor(baseTextService) {
+
+    _baseTextService = baseTextService
   }
 
-  changeName() {
-    this.name = 'angular-tips';
+  importText() {
+    _baseTextService.import(this.text)
   }
 
-  randomName() {
-    this.name = this.random.getName();
-  }
 }
