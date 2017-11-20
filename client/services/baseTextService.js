@@ -8,8 +8,6 @@ class BaseTextService {
 		_$http = $http
 	}
 
-	// $http.post('/someUrl', data, config).then(successCallback, errorCallback);
-
 	import(text) {
 		return _$http.post('/api/base-text/import', {text})
 	}

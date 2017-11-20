@@ -1,0 +1,18 @@
+game-settings .gameSettings__dsKeyword {
+    align-items: center;
+    height: 40px;
+    display: inline-grid;
+    text-align: center;
+}
+
+game-settings .container .gameSettings__listKeywords{
+    max-height: 350px;
+    overflow-y: auto;
+}
+
+game-settings .gameSettings__buttonImport {
+    float: right;
+}
+game-settings .gameSettings__numberKeywordGame--description {
+    margin-right: 10px;
+}

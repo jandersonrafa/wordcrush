@@ -6,7 +6,8 @@ import './appBaseSecured.css'
 export default {
 	restrict: 'E',
 	template,
-	bindings: {},
+	bindings: {
+	},
 	controller,
 	controllerAs: 'ctrl',
 }

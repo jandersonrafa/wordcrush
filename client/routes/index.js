@@ -10,11 +10,20 @@ export default function routing($stateProvider, $urlRouterProvider) {
             template: '<app-base-secured>',
         })
 
-    $stateProvider.state('secured.home', {
+    $stateProvider.state('secured.baseText', {
         url: '/base-text',
         views: {
 			[`content@${'secured'}`]: {
 				template: '<base-text></base-text>',
+			},
+		},
+    })
+
+    $stateProvider.state('secured.gameSettings', {
+        url: '/game-settings',
+        views: {
+			[`content@${'secured'}`]: {
+				template: '<game-settings></game-settings>',
 			},
 		},
     })

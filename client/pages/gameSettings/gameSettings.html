@@ -1,0 +1,49 @@
+<div class="section">
+    <div class="container ">
+        <div class="gameSettings__numberKeywordGame">
+            <div class="col-md-10">
+                <div class="row">
+                    <div class="form-group gameSettings__numberKeywordGame--description">
+                        <h4>Número de palavras no jogo:</h4>
+                    </div>
+                    <div class="form-group">
+                        <br>
+                        <input type="text" ng-model="settings.numberKeywordGame.nrQuantityKeyword" 
+                        class="form-control" placeholder="Default">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="tim-title ">
+            <h4>Cadastre dicas relacionadas a cada palavra-chave:</h4>
+            <br>
+        </div>
+        <div class="gameSettings__listKeywords">
+            <div ng-repeat="keywordHelp in ctrl.settings.listKeywordHelp">
+                <div class="col-md-10">
+                    <div class="row">
+                        <div class="col-md-2">
+                            <div class="form-group">
+                                <span class="col-md-12 gameSettings__dsKeyword label label-default">{{keywordHelp.dsKeyword}}</span>
+                            </div>
+                        </div>
+                        <div class="col-md-10">
+                            <div class="form-group">
+                                <input type="text" ng-model="keywordHelp.dsHelp" class="col-md-12  form-control" placeholder="Default">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-md-12">
+                <button type="button" ng-click="ctrl.save()" class="gameSettings__buttonImport btn btn-default btn-round">
+                    <i class="fa fa-save"></i> Salvar
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
