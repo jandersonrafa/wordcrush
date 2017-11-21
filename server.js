@@ -58,8 +58,9 @@ var express = require('express');
 var app = express();
 var httpProxy = require('http-proxy');
 var apiProxy = httpProxy.createProxyServer();
-var serverOne = 'https://wordcrush-back.herokuapp.com';
-const PORT  = process.env.PORT || 8080;
+var API_SERVER = 'https://wordcrush-back.herokuapp.com';
+// var serverOne = 'http://localhost:5000';
+const PORT = process.env.PORT || 8080;
 
 
 const path = require('path');
@@ -68,7 +69,24 @@ app.use(express.static(path.join(__dirname, 'dist')));
 
 app.all("/api/*", function (req, res) {
     console.log('redirecting to Server1');
-    apiProxy.web(req, res, { target: serverOne });
+    // apiProxy.web(req, res, { target: serverOne });
+    apiProxy.web(req, res,
+        {
+            logLevel: 'debug',
+            target: API_SERVER,
+            changeOrigin: true,
+            secure: false,
+            xfwd: true,
+            onProxyReq: function (proxyReq, req, res) {
+                // Browers may send Origin headers even with same-origin
+                // requests. To prevent CORS issues, we have to change
+                // the Origin to match the target URL.
+                if (proxyReq.getHeader('origin')) {
+                    proxyReq.setHeader('origin', API_SERVER);
+                }
+            }
+        }
+    );
 });
 
 app.listen(PORT);
