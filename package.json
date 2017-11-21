@@ -1,7 +1,7 @@
 {
-  "name": "doce-dom",
+  "name": "wordcrush-front",
   "version": "1.0.0",
-  "description": "Site da doce dom",
+  "description": "wordcrush",
   "scripts": {
     "build-usar-futuramente": "webpack — config webpack.config.prod.js",
     "build": "webpack",
