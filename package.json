@@ -5,7 +5,8 @@
   "scripts": {
     "build-usar-futuramente": "webpack — config webpack.config.prod.js",
     "build": "webpack",
-    "start": "webpack-dev-server"
+    "start-dev": "webpack-dev-server",
+    "start": "npm run build && node server.js"
   },
   "author": "Janderson Rafael",
   "dependencies": {
