@@ -1,14 +1,17 @@
 <div class="section">
-    <div class="container ">
+    <div class="container containerPlayGame">
         <div class="col-md-10">
-            <div class="row">
-                <div class="form-group playGame__numberKeywordGame--description">
-                    <h4>Número de palavras no jogo:</h4>
-                </div>
-                <div class="form-group">
-                    <br>
-                    <input type="text" ng-model="settings.numberKeywordGame.nrQuantityKeyword" 
-                    class="form-control" placeholder="Default">
+            <div class="row" style="width: 500px; height: 500px;">
+                <div 
+                    style="width: {{100/ctrl.settings.mapCharacters.length}}%; height: {{100/ctrl.settings.mapCharacters.length}}%" 
+                    ng-repeat="listChar in ctrl.settings.mapCharacters track by $index">
+                    <button 
+                        style="width: {{100}}%; height: {{100}}%" 
+                        ng-repeat="char in listChar track by $index" 
+                        type="button" 
+                        ng-click="ctrl.select(char, $parent.$index,$index)">
+                        {{char.character}}   
+                    </button>
                 </div>
             </div>
         </div>
