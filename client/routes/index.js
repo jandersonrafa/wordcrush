@@ -27,8 +27,13 @@ export default function routing($stateProvider, $urlRouterProvider) {
 			},
 		},
     })
-    $stateProvider.state('teste', {
-        url: '/teste',
-        template: '<teste></teste>',
+
+    $stateProvider.state('secured.playGame', {
+        url: '/play-game',
+        views: {
+			[`content@${'secured'}`]: {
+				template: '<play-game></play-game>',
+			},
+		},
     })
 }

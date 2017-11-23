@@ -14,6 +14,7 @@ export default class GameSettingsController {
   }
 
   save() {
+    console.log(this.settings)
     _gameSettingsService.save(this.settings).then((res)=>{
     })
   }

@@ -12,8 +12,9 @@ class GameSettingsService {
 		return _$http.get('/api/game-settings/find-settings')
 	}
 
-	save(listKeywordHelps) {
-		return _$http.post('/api/game-settings/save', listKeywordHelps)
+	save(settings) {
+		console.log(settings)
+		return _$http.post('/api/game-settings/save', settings)
 	}
 
 }
