@@ -14,6 +14,18 @@ export default class PlayGameController {
     })
   }
 
+  checkWords() {
+    this.settings.listRandomKeywordHelp.forEach(kh => {
+      var listContains = this.settings.mapCharacters.filter( line => {
+        return line.map(k => k.character).join("").toUpperCase().indexOf(kh.dsKeyword.toUpperCase()) > -1
+      })
+      debugger
+      if (listContains.length >0) {
+        kh.checked = true;
+      }
+    });
+  }
+
   select(char, x, y) {
     if (this.primarySelect) {
       var primaryPositionX = this.primarySelect.x

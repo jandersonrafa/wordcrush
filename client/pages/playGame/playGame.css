@@ -1,3 +1,19 @@
 .containerPlayGame button {
     cursor:pointer;
 }
+
+.containerPlayGame__matriz {
+    float: left;
+}
+
+.containerPlayGame__dicas {
+    float: right;
+}
+
+.containerPlayGame {
+    min-height: 600px;
+}
+
+.custom-checkbox {
+    width: 100%;
+}

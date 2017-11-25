@@ -1,17 +1,36 @@
 <div class="section">
     <div class="container containerPlayGame">
-        <div class="col-md-10">
-            <div class="row" style="width: 500px; height: 500px;">
-                <div 
-                    style="width: {{100/ctrl.settings.mapCharacters.length}}%; height: {{100/ctrl.settings.mapCharacters.length}}%" 
-                    ng-repeat="listChar in ctrl.settings.mapCharacters track by $index">
-                    <button 
-                        style="width: {{100}}%; height: {{100}}%" 
-                        ng-repeat="char in listChar track by $index" 
-                        type="button" 
-                        ng-click="ctrl.select(char, $parent.$index,$index)">
-                        {{char.character}}   
-                    </button>
+        <button 
+            type="button" 
+            ng-click="ctrl.checkWords()">
+            Verificar palavras acertadas
+        </button>
+        <div class="row containerPlayGame__matriz col-md-6" style="width: 500px; height: 500px;">
+            <div 
+                style=" width: {{100/ctrl.settings.mapCharacters.length}}%; height: {{100/ctrl.settings.mapCharacters.length}}%" 
+                ng-repeat="listChar in ctrl.settings.mapCharacters track by $index">
+                <button 
+                    style="width: {{100}}%; height: {{100}}%" 
+                    ng-repeat="char in listChar track by $index" 
+                    type="button" 
+                    ng-click="ctrl.select(char, $parent.$index,$index)">
+                    {{char.character}}   
+                </button>
+            </div>
+        </div>
+        <div class="containerPlayGame__dicas col-md-6">
+            2 Palavras Restantes
+            <div class="progress">
+                <div class="progress-bar progress-bar-success" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+            </div><br/>
+
+            <div class="form-group has-success">
+                
+                <div ng-repeat="keywordHelp in ctrl.settings.listRandomKeywordHelp">
+                    <label class="custom-control custom-checkbox">
+                        <i ng-if="keywordHelp.checked" class="fa fa-check-circle"></i>
+                        <span class="custom-control-description">{{ keywordHelp.dsHelp }}</span>
+                    </label>
                 </div>
             </div>
         </div>
