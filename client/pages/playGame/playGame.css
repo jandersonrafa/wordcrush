@@ -1,5 +1,6 @@
-.containerPlayGame {
-    padding: 50px
+.containerPlayGame__Margin {
+    padding-left: 50px;
+    padding-right: 50px;
 }
 
 .containerPlayGame__matriz {
@@ -72,4 +73,8 @@
 
 .playGame__randomHelp {
     margin-left:10px;
+}
+
+.custom-control-description {
+    margin: 0px;
 }
