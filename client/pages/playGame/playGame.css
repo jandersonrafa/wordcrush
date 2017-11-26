@@ -1,13 +1,13 @@
-.containerPlayGame button {
-    cursor:pointer;
+.containerPlayGame {
+    padding: 50px
 }
 
 .containerPlayGame__matriz {
-    float: left;
+    display: flex;
 }
 
-.containerPlayGame__dicas {
-    float: right;
+.containerPlayGame button {
+    cursor:pointer;
 }
 
 .containerPlayGame {

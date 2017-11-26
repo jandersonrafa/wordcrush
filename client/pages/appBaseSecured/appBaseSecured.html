@@ -10,20 +10,37 @@
 				<span class="navbar-toggler-bar"></span>
 				<span class="navbar-toggler-bar"></span>
 			</button>
-			<a class="navbar-brand" href="https://www.creative-tim.com">Wordcrush</a>
+			<a class="navbar-brand" href ng-click="ctrl.redirectBaseText()" >Wordcrush</a>
 		</div>
 		<div class="collapse navbar-collapse" id="navbarToggler">
 			<ul class="navbar-nav ml-auto">
-				<li class="nav-item">
+				<!-- <li class="nav-item">
 					<a class="nav-link" rel="tooltip" title="Like us on Facebook" data-placement="bottom" href="https://www.facebook.com/CreativeTim"
 					 target="_blank">
 						<i class="fa fa-facebook-square"></i>
 						<p class="d-lg-none">Facebook</p>
 					</a>
+				</li> -->
+				<li class="nav-item">
+					<a ng-click="ctrl.redirectBaseText()" 
+						ng-class="{'menu-destacado': ctrl.isStateBaseText()}" 
+						class="nav-link">
+						<i class="fa fa-cloud-upload"></i> Texto Base
+					</a>
 				</li>
 				<li class="nav-item">
-					<a href="documentation/tutorial-components.html" target="_blank" class="nav-link">
-						<i class="fa fa-file-word-o"></i> Documentation</a>
+					<a ng-click="ctrl.redirectGameSettings()" 
+						class="nav-link"
+						ng-class="{'menu-destacado': ctrl.isStateGameSettings()}">
+						<i class="fa fa-gears"></i> Configuração
+					</a>
+				</li>
+				<li class="nav-item">
+					<a ng-click="ctrl.redirectPlayGame()" 
+						class="nav-link"
+						ng-class="{'menu-destacado': ctrl.isStatePlayGame()}">
+						<i class="fa fa-soccer-ball-o"></i> Jogar
+					</a>
 				</li>
 			</ul>
 		</div>
@@ -44,17 +61,12 @@
 					</div>
 				</div>
 
-				<h2 class="presentation-subtitle text-center">Make your mark with a Free Bootstrap 4 UI Kit! </h2>
+				<h2 class="presentation-subtitle text-center">Wordcrush é um jogo! </h2>
 			</div>
 		</div>
 		<div class="moving-clouds" style="background-image:url({{ctrl.getClouds()}}">
 
 		</div>
-		<h6 class=" category category-absolute ">Designed and coded by
-			<a href="https://www.creative-tim.com " target="_blank ">
-				<img ng-src="{{::ctrl.creativeTimWhiteSlim2()}} " class="creative-tim-logo ">
-			</a>
-		</h6>
 	</div>
 	<section class="appBaseSecured-section">
 		<div ui-view="content"></div>

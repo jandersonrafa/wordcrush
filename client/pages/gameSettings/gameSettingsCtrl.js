@@ -1,8 +1,10 @@
+let _notifierService
 let _gameSettingsService
 
 export default class GameSettingsController {
-  constructor(gameSettingsService) {
+  constructor(gameSettingsService, notifierService) {
 
+    _notifierService = notifierService
     _gameSettingsService = gameSettingsService
     this.findSettings()
   }
@@ -16,6 +18,7 @@ export default class GameSettingsController {
   save() {
     console.log(this.settings)
     _gameSettingsService.save(this.settings).then((res)=>{
+      _notifierService.success("Salvo com sucesso!")
     })
   }
 }

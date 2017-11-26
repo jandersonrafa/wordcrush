@@ -3,6 +3,9 @@ import 'font-awesome/css/font-awesome.min.css'
 import 'bootstrap/dist/js/bootstrap.min.js';
 import 'bootstrap-switch/dist/js/bootstrap-switch.min.js'
 
+import 'pnotify/src/pnotify.css'
+import 'pnotify/src/pnotify.buttons.css'
+
 import angular from 'angular';
 import uirouter from 'angular-ui-router';
 

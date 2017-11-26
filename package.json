@@ -24,6 +24,8 @@
     "html-webpack-plugin": "^2.7.1",
     "http-proxy": "^1.16.2",
     "jquery": "^3.2.1",
+    "lodash": "^4.17.4",
+    "pnotify": "^3.2.1",
     "popper.js": "^1.12.5",
     "raw-loader": "^0.5.1",
     "style-loader": "^0.19.0",

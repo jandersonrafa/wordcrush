@@ -59,10 +59,10 @@ export default class PlayGameController {
   }
 
   getTotalPalavrasRestantes() {
-    return this.settings.listRandomKeywordHelp.filter(kh => !kh.checked).length
+    return this.settings ? this.settings.listRandomKeywordHelp.filter(kh => !kh.checked).length : 0
   }
 
   getTotalPalavras() {
-    return this.settings.listRandomKeywordHelp.length
+    return this.settings ? this.settings.listRandomKeywordHelp.length : 0
   }
 }

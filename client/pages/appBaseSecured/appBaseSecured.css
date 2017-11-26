@@ -1,0 +1,8 @@
+.nav-item a {
+    cursor:pointer;
+}
+
+.menu-destacado {
+    border: 2px solid #bebebe;
+    border-radius: 10px;
+}

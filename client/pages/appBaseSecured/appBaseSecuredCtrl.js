@@ -9,10 +9,12 @@ import joshuaStannard from './assets/img/joshua-stannard.jpg'
 import wordcrush from './assets/img/wordcrush.jpg'
 import clouds from './assets/img/clouds.png'
 
-
+let _$state
 export default class AppBaseSecuredCtrl {
-	constructor() {
+	constructor($state) {
 		'ngInject'
+
+		_$state = $state
 	}
 
 	fogLow() {
@@ -41,5 +43,29 @@ export default class AppBaseSecuredCtrl {
 
 	getClouds() {
 		return clouds
+	}
+
+	isStateBaseText() {
+		return _$state.is("secured.baseText")
+	}
+
+	isStateGameSettings() {
+		return _$state.is("secured.gameSettings")
+	}
+
+	isStatePlayGame() {
+		return _$state.is("secured.playGame")
+	}
+
+	redirectBaseText() {
+		_$state.go("secured.baseText")
+	}
+
+	redirectGameSettings() {
+		_$state.go("secured.gameSettings")
+	}
+
+	redirectPlayGame() {
+		_$state.go("secured.playGame")
 	}
 }
