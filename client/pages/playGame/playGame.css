@@ -17,3 +17,59 @@
 .custom-checkbox {
     width: 100%;
 }
+
+.border-red {
+    border: 5px ridge blue;
+}
+
+.selectSetas {
+    width: 100%; 
+    height: 100%;
+    position: relative;
+    padding: 15px;
+    color:blue;
+}
+
+.selectButton {
+    position: absolute;
+}
+
+.selectSetasLeft {
+    left:0px;
+    top:43%;
+    position: absolute;
+    margin-left: 10px;
+}
+
+.selectSetasRight {
+    right:0px;
+    top:43%;
+    position: absolute;
+    margin-right: 10px;
+}
+
+.selectSetasDown {
+    bottom:0px;
+    left:43%;
+    position: absolute;
+    margin-bottom: 10px;
+}
+
+.selectSetasUp {
+    top:0px;
+    left:43%;
+    position: absolute;
+    margin-top: 10px;
+}
+
+.playgGame__iconCheck{
+    color: green;
+}
+
+.playgGame__iconTimes{
+    color: red;
+}
+
+.playGame__randomHelp {
+    margin-left:10px;
+}
